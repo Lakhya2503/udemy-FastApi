@@ -7,8 +7,3 @@
 # decorators
 # virtual ENv
 
-
-#  data types in python
-# int, str, number
-# list, dict, set, tuple, class, object
-# 
