@@ -65,3 +65,8 @@ pip freeze > requirement.txt
 ```
 uvicorn main:app --reload
 ```
+- you can change the port like using the command like
+
+```
+uvicorn main:app --reload --port 8001
+```
