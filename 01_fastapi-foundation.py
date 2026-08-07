@@ -29,3 +29,34 @@ def about():
         "region" : "ap-south-1",
         "version" : "1.1.2"
     }
+
+@app.get("/orders")
+def list_orders():
+    """"List recent orders"""
+    return {
+        "orders" : [
+            {
+                "id" : 1,
+                "item" : "Paneer",
+                "status" : "delivered"
+            },
+            {
+                "id" : 2,
+                "item" : "Veg Corma",
+                "status" : "pending"
+            },
+            {
+                "id" : 4,
+                "item" : "Masala Rice",
+                "status" : "cancelled"
+            },
+        ]
+    }
+
+@app.get("/orders/status")
+def order_status():
+    """"Get Order status"""
+    return {
+        "total_today_order" : 2_342_2,
+        "total_city" : "Jalgaon"
+    }
