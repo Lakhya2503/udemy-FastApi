@@ -72,3 +72,36 @@ async def request_info(request: Request):
         "query_params" : dict(request.query_params),
     }
 
+@app.get(
+    "/orders/active",
+    summary="Get Active Orders",
+    description=(
+        "Returns all orders that are currently being prepared"
+        "or are out for delivery"
+    ),
+    tags=["Orders"],
+    response_description="List of active orders objects",
+    deprecated=False
+)
+def get_active_order():
+    """This docstring also aprears in docs"""
+    return {
+        "active_orders" : [
+            {
+                "id" :  1,
+                "item" : "panner",
+                "status" : "delivered"
+            }
+        ] 
+    }
+
+@app.get("/restaurants", tags=["Restaurants"])
+def list_resto():
+    """anothre docstring for another endpoint"""
+    return {
+        "restaurants" : [
+            {
+                "test" : "test"
+            }
+        ]
+    }
