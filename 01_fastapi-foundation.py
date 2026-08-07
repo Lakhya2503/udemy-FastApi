@@ -5,7 +5,7 @@ import uvicorn
 app = FastAPI(
     title="Zomato Order Service",
     description=(
-        "Internal API for managing Orders",
+       "Internal API for managing Orders"
         "It will handle creation, Traking of delivery system."
     ),
     version="1.1.2",
@@ -59,4 +59,15 @@ def order_status():
     return {
         "total_today_order" : 2_342_2,
         "total_city" : "Jalgaon"
+    }
+
+@app.get("/debug/request-info")
+async def request_info(request: Request):
+    """ Inspect the row request object """
+    return {
+        "method" : request.method,
+        "url" : str(request.url),
+        "header" : dict(request.headers),
+        "path_params" : request.path_params,
+        "query_params" : dict(request.query_params),
     }
