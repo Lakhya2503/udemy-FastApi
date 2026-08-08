@@ -105,3 +105,14 @@ def list_resto():
             }
         ]
     }
+
+@app.get("/restaurants/jalgaon", tags=["Jalgaon Restaurants"])
+def list_resto_jalgaon():
+    """anothre docstring for another endpoint"""
+    return {
+        "restaurants" : [
+            {
+                "test" : "test"
+            }
+        ]
+    }
