@@ -6,13 +6,14 @@
 - One request at a time per worker
 
 ##### One DP Per Order
-
+<!-- Decision Pending (DP) -->
 
 ## ASGI
 - async server Gatway Interface
 - many request per worker
 
 ##### One DP Picks up multiple order3
+<!-- Decision Pending (DP) -->
 
 #### install steps
 #### step.1

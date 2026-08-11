@@ -17,7 +17,7 @@ app = FastAPI(
 @app.get("/")
 def read_root():
     """"Root endpoint - Health Check"""
-    # FastAPI Convertes this dic to json
+    # FastAPI Convertes this dictonary to json
     return { "message" : "Welcome to Zomato Order Service", "status": "Healthy" }
 
 @app.get("/about")
